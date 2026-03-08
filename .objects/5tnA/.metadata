@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome Practice Software Testing - Toolshop - v5.0",
+  "Type": "App",
+  "Id": "5tnAEZxfh0Cs6RsMZgh7EA",
+  "Reference": "OxB2zzKI3k-tStEjfS750g/5tnAEZxfh0Cs6RsMZgh7EA",
+  "Created": "2026-03-07T16:20:42.440721Z",
+  "Updated": "2026-03-07T16:20:42.440721Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

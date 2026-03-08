@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="pXcdfGL6ckGrXu0fPchcjw" Reference="OxB2zzKI3k-tStEjfS750g/wdSfGk5V5U-WMFnwgqTglw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/product/01KK4TQRTZF5QD79G7MRPNWKYY" CVScreenId="ccbdc45c-feb8-4c69-9a7e-7b6a27da7349" DesignTimeRectangle="1583, 259, 293, 30" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='alert' tag='DIV' aaname=' The selected product id is invalid. ' /&gt;" Guid="36ad5c80-c287-4a73-8803-cf73f605a798" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.ScopeSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;html app='chrome.exe' title='"+ElementSearch+" - Practice Software Testing - Toolshop - v5.0' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.ScopeSelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="007f9ba9add8b6e86a1d5e8c9a74311d.jpg" xmlns="">0aoxhi-AZf0Ss_d-m9AKuCA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

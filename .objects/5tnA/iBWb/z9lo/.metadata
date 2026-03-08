@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Practice Software Testing - Toolshop -(1)",
+  "Type": "Screen",
+  "Id": "z9loSlV2PkS6mqH5DVzaOg",
+  "Reference": "OxB2zzKI3k-tStEjfS750g/z9loSlV2PkS6mqH5DVzaOg",
+  "ParentRef": "OxB2zzKI3k-tStEjfS750g/iBWbU-QtD0Kw_xGL4S56tw",
+  "Created": "2026-03-07T19:27:38.3794888Z",
+  "Updated": "2026-03-07T19:27:38.3794888Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Searched for Pliers",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "YgBWYLx3l0SSKQvs4BELrA",
+  "Reference": "OxB2zzKI3k-tStEjfS750g/YgBWYLx3l0SSKQvs4BELrA",
+  "ParentRef": "OxB2zzKI3k-tStEjfS750g/z9loSlV2PkS6mqH5DVzaOg",
+  "Created": "2026-03-07T19:27:38.6803991Z",
+  "Updated": "2026-03-07T19:27:38.6803991Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

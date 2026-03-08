@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="uidNFLBr2E-6NOSRo9Zw8w" Reference="OxB2zzKI3k-tStEjfS750g/QSViRsBKs0WewEa99MdyQg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com" CVScreenId="4cc6e225-dfba-4e3b-b784-a323d1b56a42" DesignTimeRectangle="562, 182, 1207, 42" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="c3788c4a-b2ea-40a5-8338-776dd950860d" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.FullSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl tag='H3' aaname='Searched for: ' innertext='Searched for: "+ElementSearch+"' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.FullSelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="c45696798701f8a8e118e609d31be43a.jpg" xmlns="">076KdQKB1JUuRs7Z6-TXqyA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

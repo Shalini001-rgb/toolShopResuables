@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Pliers(1)",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "ksFWoTMKJEud81PJp4JpSw",
+  "Reference": "OxB2zzKI3k-tStEjfS750g/ksFWoTMKJEud81PJp4JpSw",
+  "ParentRef": "OxB2zzKI3k-tStEjfS750g/4zUsId_6eU2uQ-l_ObXHNA",
+  "Created": "2026-03-07T19:50:35.2213849Z",
+  "Updated": "2026-03-07T19:50:35.2213849Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

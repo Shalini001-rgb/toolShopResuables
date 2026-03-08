@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Login - Practice Software Testing - To",
+  "Type": "Screen",
+  "Id": "4zUsId_6eU2uQ-l_ObXHNA",
+  "Reference": "OxB2zzKI3k-tStEjfS750g/4zUsId_6eU2uQ-l_ObXHNA",
+  "ParentRef": "OxB2zzKI3k-tStEjfS750g/iBWbU-QtD0Kw_xGL4S56tw",
+  "Created": "2026-03-07T18:55:15.3237382Z",
+  "Updated": "2026-03-07T18:55:15.3237382Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "INPUT search-query",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "GIv_4kKP80KFpc_zWNEzWA",
+  "Reference": "OxB2zzKI3k-tStEjfS750g/GIv_4kKP80KFpc_zWNEzWA",
+  "ParentRef": "OxB2zzKI3k-tStEjfS750g/4zUsId_6eU2uQ-l_ObXHNA",
+  "Created": "2026-03-07T19:23:21.2857112Z",
+  "Updated": "2026-03-07T19:23:21.2857112Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

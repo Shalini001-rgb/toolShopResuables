@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="M4RFjedxOkOurwuLhKNBUw" Reference="OxB2zzKI3k-tStEjfS750g/4Tw7_-aoA0eYXYSEdbvnug" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com" CVScreenId="c3e7206c-9eff-4545-b81e-651ab0aba2d5" DesignTimeRectangle="190, 773, 16, 17" ElementType="CheckBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl class='icheck' matching:class='fuzzy' fuzzylevel:class='0.0' tag='INPUT' type='checkbox' aaname='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="eb8d4182-8ecf-41a1-8774-c06e06fda719" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="c3e7206c-9eff-4545-b81e-651ab0aba2d5" DesignTimeRectangle="190, 767, 97, 30" ElementType="Text" Guid="cf6397fb-42fb-4083-9beb-ed3632db40bd" SearchSteps="FuzzySelector">
+            <Target.FuzzySelectorArgument>
+              <p:InArgument x:TypeArguments="x:String">
+                <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl tag='LABEL' parentclass='checkbox' parentid='filters' visibleinnertext=' "+HandToolFilter+"' check:innerText='"+HandToolFilter+"' /&gt;"</p:CSharpValue>
+              </p:InArgument>
+            </Target.FuzzySelectorArgument>
+          </Target>
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="8fd2e95d7bfb0425cea1a340774667da.jpg" xmlns="">0RVegYUbGwUSxT8mLWSdf-w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Check</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

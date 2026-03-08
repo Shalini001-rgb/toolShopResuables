@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="aKF581ZkoUCJPmN49-VWQA" Reference="lcaYJExaA023vWQMuPxTTw/7IT555Kirk243sBw8NKsBA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com" CVScreenId="1d2db747-ffef-4f5a-bab1-f7c426afa68a" CvElementArea="150, 482, 204, 41" CvType="InputBox" DesignTimeRectangle="152, 484, 200, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='search-query' tag='INPUT' /&gt;" Guid="7c00d07c-cd27-4d78-a204-35810b84a51e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target CVScreenId="1d2db747-ffef-4f5a-bab1-f7c426afa68a" CvElementArea="383, 482, 77, 41" CvTextArea="397, 495, 49, 15" CvTextArgument="Search" CvType="Button" DesignTimeRectangle="385, 484, 74, 38" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-secondary' aaname='Search ' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Search' /&gt;" Guid="7c94047b-f2b3-4399-803c-e68d47d23476" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="c326d011823e2e00dae18ef6357149c3.jpg" xmlns="">c326d011823e2e00dae18ef6357149c3.jpg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="DyLG6O5EQ0G2DOM-Qoo2PA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/auth/login" CVScreenId="75f8f799-2172-4c2c-b3ff-a92ee5151201" CvTextArea="1321, 316, 56, 18" CvTextArgument="Home" CvType="Text" DesignTimeRectangle="1313, 300, 73, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='navbarSupportedContent' tag='A' /&gt;" Guid="b6ae68fb-03c0-43e1-8c0f-bb806e12f15e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="9ac4949396f0894701e5c1bacca8ccee.jpg" xmlns="">0EcJWs_kjakKtc1DIE2vjFw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

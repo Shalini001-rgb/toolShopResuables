@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Filters",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "KQh58PDHuEuCcaIu2sJAAA",
+  "Reference": "OxB2zzKI3k-tStEjfS750g/KQh58PDHuEuCcaIu2sJAAA",
+  "ParentRef": "OxB2zzKI3k-tStEjfS750g/EUODH3jWfkmcKYrK44rdkA",
+  "Created": "2026-03-08T05:51:29.4543212Z",
+  "Updated": "2026-03-08T05:51:29.4543212Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

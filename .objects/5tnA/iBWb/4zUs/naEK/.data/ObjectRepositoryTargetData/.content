@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="QXJW0kLoOUGKUh3-Hkv_OA" Reference="OxB2zzKI3k-tStEjfS750g/naEKW2D4w0SH_yDE_I4b6g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com" CVScreenId="52341932-6d89-44db-b2e6-454ab6174cca" DesignTimeRectangle="997, 555, 338, 30" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="1ee38221-8e60-4670-a5eb-2f5e0f686350" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.FullSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl tag='H5' class='card-title' data-test='product-name' parentclass='card-body' visibleinnertext='"+ElementSearch+"' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.FullSelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="59d0eae8bcc79715f4af2d9db42d7e2a.jpg" xmlns="">06xsGyTXnfUuRgIIyJhNpHQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

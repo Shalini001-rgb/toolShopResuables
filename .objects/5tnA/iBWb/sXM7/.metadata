@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Pliers - Practice Software Testing - T",
+  "Type": "Screen",
+  "Id": "sXM7l8xadU-fSRDO7sJtJg",
+  "Reference": "OxB2zzKI3k-tStEjfS750g/sXM7l8xadU-fSRDO7sJtJg",
+  "ParentRef": "OxB2zzKI3k-tStEjfS750g/iBWbU-QtD0Kw_xGL4S56tw",
+  "Created": "2026-03-07T19:53:29.2780455Z",
+  "Updated": "2026-03-07T19:53:29.2780455Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
