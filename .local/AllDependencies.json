@@ -12581,7 +12581,7 @@
       ]
     },
     "atuipath_utilities/1.0.6": {
-      "sha512": "W4V6hF3T/UJCq2OKOjU/QHPNUNJ3VAf0jCwdEy0UuzZbdOHtfEHKqvBCbSIerUhLDe/qh6leKSEWJ/T9m4igUw==",
+      "sha512": "ySMLgBAZB3d/eSSYshwf41l3CH+4N3Q7UGjWkcC7+sOUlQDtNGjliNHTQlTM9VwwUwBApv9I3/Esyh/yCTZOSw==",
       "type": "package",
       "path": "atuipath_utilities/1.0.6",
       "files": [
@@ -12589,6 +12589,8 @@
         "atuipath_utilities.1.0.6.nupkg.sha512",
         "atuipath_utilities.nuspec",
         "content/.gitignore",
+        "content/.objects/.metadata",
+        "content/.objects/.type",
         "content/.project/PackageBindingsMetadata.json",
         "content/.project/design.json",
         "content/.settings/Design/settings-5190454b.json",
@@ -24659,15 +24661,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\akrao\\.nuget\\packages\\": {}
+    "C:\\Users\\Testing\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "ToolsShopReusables",
       "projectName": "ToolsShopReusables",
-      "projectPath": "C:\\Users\\akrao\\ToolsShopReusables\\.local",
-      "packagesPath": "C:\\Users\\akrao\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\akrao\\ToolsShopReusables\\.local",
+      "projectPath": "C:\\Users\\Testing\\Documents\\UiPath\\ToolsShopReusables\\.local",
+      "packagesPath": "C:\\Users\\Testing\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Testing\\Documents\\UiPath\\ToolsShopReusables\\.local",
       "UsingMicrosoftNETSdk": false,
       "restoreAuditProperties": {
         "enableAudit": "False"
@@ -24697,7 +24699,7 @@
             "version": "[1.0.6, 1.0.6]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\akrao\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Testing\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

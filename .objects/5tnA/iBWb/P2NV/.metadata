@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Practice Software Testing - Toolshop - v(1)",
+  "Type": "Screen",
+  "Id": "P2NVeQlVoE2fdi9jMA5TIw",
+  "Reference": "OxB2zzKI3k-tStEjfS750g/P2NVeQlVoE2fdi9jMA5TIw",
+  "ParentRef": "OxB2zzKI3k-tStEjfS750g/iBWbU-QtD0Kw_xGL4S56tw",
+  "Created": "2026-03-09T07:42:40.7663791Z",
+  "Updated": "2026-03-09T07:42:40.7663791Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
