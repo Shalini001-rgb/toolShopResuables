@@ -1,5 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ChatBot" this:ChatBot.reportId="0" this:ChatBot.rowNumber="0" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ar="clr-namespace:atuipath_utilities.Report;assembly=atuipath_utilities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ChatBot" this:ChatBot.Browser="chrome.exe" this:ChatBot.reportId="0" this:ChatBot.rowNumber="0" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ar="clr-namespace:atuipath_utilities.Report;assembly=atuipath_utilities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
+    <x:Property Name="Browser" Type="InArgument(x:String)" />
     <x:Property Name="ExcelPath" Type="InArgument(x:String)" />
     <x:Property Name="strSuiteId" Type="InArgument(x:String)" />
     <x:Property Name="reportId" Type="InArgument(x:Int32)" />
@@ -65,6 +66,8 @@
       <x:String>UiPath.Excel</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -146,7 +149,12 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ChatBot" sap:VirtualizedContainerService.HintSize="948.4000000000001,8640.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="ChatBot" sap:VirtualizedContainerService.HintSize="722,9208" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ChatOption" />
       <Variable x:TypeArguments="x:String" Default="Pliers" Name="ChatMessage" />
@@ -158,33 +166,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ra:CreateReport ContinueOnError="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="556.8,166.4" sap2010:WorkflowViewState.IdRef="CreateReport_1" ReportName="Chatbot">
-      <ra:CreateReport.ReportLocation>
-        <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">@"C:\Users\Testing\Documents\UiPath\TestReports"</CSharpValue>
-        </InArgument>
-      </ra:CreateReport.ReportLocation>
-      <ra:CreateReport.isCreated>
-        <OutArgument x:TypeArguments="x:Int32">
-          <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">reportId</CSharpReference>
-        </OutArgument>
-      </ra:CreateReport.isCreated>
-    </ra:CreateReport>
-    <ra:StartSuite ContinueOnError="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="556.8,117.6" sap2010:WorkflowViewState.IdRef="StartSuite_1" SuiteName="Chat suite">
-      <ra:StartSuite.ReportId>
-        <InArgument x:TypeArguments="x:Int32">
-          <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">reportId</CSharpValue>
-        </InArgument>
-      </ra:StartSuite.ReportId>
-      <ra:StartSuite.suiteId>
-        <OutArgument x:TypeArguments="x:String">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">strSuiteId</CSharpReference>
-        </OutArgument>
-      </ra:StartSuite.suiteId>
-    </ra:StartSuite>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="556.8,8333.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="556.8,9184.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="555.2,7836.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="555.2,8339.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataTable" Name="chatBotData" />
           </Sequence.Variables>
@@ -216,24 +200,23 @@
               </OutArgument>
             </ar:startTest.str_out_TestId>
           </ar:startTest>
-          <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="521.6,230.4" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="ToolSheet">
-            <ui:ReadRange.DataTable>
+          <ui:ReadCsvFile FilePath="{x:Null}" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" sap:VirtualizedContainerService.HintSize="521.6,172.8" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1">
+            <ui:ReadCsvFile.DataTable>
               <OutArgument x:TypeArguments="sd:DataTable">
-                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">chatBotData</CSharpReference>
+                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">chatBotData</CSharpReference>
               </OutArgument>
-            </ui:ReadRange.DataTable>
+            </ui:ReadCsvFile.DataTable>
+            <ui:ReadCsvFile.PathResource>
+              <InArgument x:TypeArguments="upr:IResource">
+                <CSharpValue x:TypeArguments="upr:IResource" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83">LocalResource.FromPath(ExcelPath)</CSharpValue>
+              </InArgument>
+            </ui:ReadCsvFile.PathResource>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ReadRange.WorkbookPath>
-              <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">ExcelPath</CSharpValue>
-              </InArgument>
-            </ui:ReadRange.WorkbookPath>
-          </ui:ReadRange>
+          </ui:ReadCsvFile>
           <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="521.6,216" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
@@ -257,7 +240,7 @@
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">chatBotData.Rows[0]["ChatMessage"].ToString()</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66">chatBotData.Rows[rowNumber]["ChatMessage"].ToString()</CSharpValue>
                     </InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
@@ -269,20 +252,20 @@
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">chatBotData.Rows[0]["SearchItem"].ToString()</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">chatBotData.Rows[rowNumber]["SearchItem"].ToString()</CSharpValue>
                     </InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
               </scg:List>
             </ui:MultipleAssign.AssignOperations>
           </ui:MultipleAssign>
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Practice Software Testing - Toolshop -" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="521.6,7044" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="bdf02510-6247-4f8e-9a7c-0f860b2538a0" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Practice Software Testing - Toolshop -" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="521.6,7604" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="bdf02510-6247-4f8e-9a7c-0f860b2538a0" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,6846.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,7354.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -370,7 +353,13 @@
                       </Sequence>
                     </uix:NCheckState.IfNotExists>
                     <uix:NCheckState.Target>
-                      <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="3a996096-18b2-4764-98f5-344b2ad2ecc7" ContentHash="q793l9Udy0ebtm4dhtSfSA" DesignTimeRectangle="1815, 934, 70, 70" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-label='Open chat' tag='BUTTON' /&gt;" Guid="ec210717-d241-40f0-bbb8-b99e4a8880a9" InformativeScreenshot="65b9c3db157d51994aa28f59444a702a.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/UtuO6OaGPk6kiU5r5b_xow" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="3a996096-18b2-4764-98f5-344b2ad2ecc7" ContentHash="q793l9Udy0ebtm4dhtSfSA" DesignTimeRectangle="1815, 934, 70, 70" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-label='Open chat' tag='BUTTON' /&gt;" Guid="ec210717-d241-40f0-bbb8-b99e4a8880a9" InformativeScreenshot="65b9c3db157d51994aa28f59444a702a.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/UtuO6OaGPk6kiU5r5b_xow" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.ScopeSelectorArgument>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">"&lt;html app='"+Browser+"' title='Practice Software Testing - Toolshop - v5.0' /&gt;"</CSharpValue>
+                          </InArgument>
+                        </uix:TargetAnchorable.ScopeSelectorArgument>
+                      </uix:TargetAnchorable>
                     </uix:NCheckState.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -381,7 +370,13 @@
                   </uix:NCheckState>
                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486.4,197.6" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bdf02510-6247-4f8e-9a7c-0f860b2538a0" Version="V5">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="3a996096-18b2-4764-98f5-344b2ad2ecc7" ContentHash="dIA08R2KTkCj-ofWgOaObQ" DesignTimeRectangle="1815, 934, 70, 70" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-label='Open chat' tag='BUTTON' /&gt;" Guid="ec210717-d241-40f0-bbb8-b99e4a8880a9" InformativeScreenshot="65b9c3db157d51994aa28f59444a702a.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/UtuO6OaGPk6kiU5r5b_xow" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="3a996096-18b2-4764-98f5-344b2ad2ecc7" ContentHash="dIA08R2KTkCj-ofWgOaObQ" DesignTimeRectangle="1815, 934, 70, 70" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-label='Open chat' tag='BUTTON' /&gt;" Guid="ec210717-d241-40f0-bbb8-b99e4a8880a9" InformativeScreenshot="65b9c3db157d51994aa28f59444a702a.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/UtuO6OaGPk6kiU5r5b_xow" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.ScopeSelectorArgument>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">"&lt;html app='"+Browser+"' title='Practice Software Testing - Toolshop - v5.0' /&gt;"</CSharpValue>
+                          </InArgument>
+                        </uix:TargetAnchorable.ScopeSelectorArgument>
+                      </uix:TargetAnchorable>
                     </uix:NClick.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -405,12 +400,17 @@
                   </ui:LogMessage>
                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Find a product'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486.4,197.6" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bdf02510-6247-4f8e-9a7c-0f860b2538a0" Version="V5">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="8c5b5c6b-2a4f-42fa-81fd-0de7844d0dcf" ContentHash="O8kTgaZH4kyP-wjXmdnCaQ" CvElementArea="1453, 533, 145, 51" CvTextArea="1472, 551, 106, 20" CvType="Button" DesignTimeRectangle="1455, 536, 141, 46" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='action-btn' tag='BUTTON' /&gt;" Guid="f190f2d2-ecc0-4f50-b1c3-e2b3c80c3e2e" InformativeScreenshot="79b4205d36855724c41a282cc2952264.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/mtWCIDLwBUu6ev2FJDAIhA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="8c5b5c6b-2a4f-42fa-81fd-0de7844d0dcf" ContentHash="O8kTgaZH4kyP-wjXmdnCaQ" CvElementArea="1453, 533, 145, 51" CvTextArea="1472, 551, 106, 20" CvType="Button" DesignTimeRectangle="1455, 536, 141, 46" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='action-btn' tag='BUTTON' /&gt;" Guid="f190f2d2-ecc0-4f50-b1c3-e2b3c80c3e2e" InformativeScreenshot="79b4205d36855724c41a282cc2952264.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/mtWCIDLwBUu6ev2FJDAIhA" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
                         <uix:TargetAnchorable.CvTextArgument>
                           <InArgument x:TypeArguments="x:String">
                             <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">ChatOption</CSharpValue>
                           </InArgument>
                         </uix:TargetAnchorable.CvTextArgument>
+                        <uix:TargetAnchorable.ScopeSelectorArgument>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73">"&lt;html app='"+Browser+"' title='Practice Software Testing - Toolshop - v5.0' /&gt;"</CSharpValue>
+                          </InArgument>
+                        </uix:TargetAnchorable.ScopeSelectorArgument>
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                     <sap:WorkflowViewStateService.ViewState>
@@ -435,7 +435,13 @@
                   </ui:LogMessage>
                   <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486.4,249.6" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="bdf02510-6247-4f8e-9a7c-0f860b2538a0" Version="V5">
                     <uix:NTypeInto.Target>
-                      <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="d7c5e601-7bac-44e3-b66c-230d282a3f06" ContentHash="9ihCkweQvUGmJusS7nHvfg" DesignTimeRectangle="1450, 936, 360, 53" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl name='userInput' tag='INPUT' type='text' /&gt;" Guid="f4c5c90c-4d1d-4b07-8f88-a42b4ba6ad31" InformativeScreenshot="335927f5e29b6f23e1ce1e96ca0dd7c3.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/gfkhdG-Bik22TtXlNbtgww" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="d7c5e601-7bac-44e3-b66c-230d282a3f06" ContentHash="9ihCkweQvUGmJusS7nHvfg" DesignTimeRectangle="1450, 936, 360, 53" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl name='userInput' tag='INPUT' type='text' /&gt;" Guid="f4c5c90c-4d1d-4b07-8f88-a42b4ba6ad31" InformativeScreenshot="335927f5e29b6f23e1ce1e96ca0dd7c3.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/gfkhdG-Bik22TtXlNbtgww" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.ScopeSelectorArgument>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74">"&lt;html app='"+Browser+"' title='Practice Software Testing - Toolshop - v5.0' /&gt;"</CSharpValue>
+                          </InArgument>
+                        </uix:TargetAnchorable.ScopeSelectorArgument>
+                      </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                     <uix:NTypeInto.Text>
                       <InArgument x:TypeArguments="x:String">
@@ -464,12 +470,17 @@
                   </ui:LogMessage>
                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Pliers'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486.4,197.6" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bdf02510-6247-4f8e-9a7c-0f860b2538a0" Version="V5">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="e274adf4-c479-4aa6-b46e-dd79722f9f1e" ContentHash="_N-9B9n3DkqqmeQF8rx8tQ" CvElementArea="1453, 658, 290, 88" CvTextArea="1536, 684, 42, 15" CvType="Button" DesignTimeRectangle="1538, 679, 192, 24" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='product-name' tag='DIV' /&gt;" Guid="26fbd79c-441a-4298-9b9d-7abe46ba12f5" InformativeScreenshot="22e31f9b912172c60041a8ac68e81dfe.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/psF-Hi2_8UKygBTj-WeuEQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="e274adf4-c479-4aa6-b46e-dd79722f9f1e" ContentHash="_N-9B9n3DkqqmeQF8rx8tQ" CvElementArea="1453, 658, 290, 88" CvTextArea="1536, 684, 42, 15" CvType="Button" DesignTimeRectangle="1538, 679, 192, 24" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='product-name' tag='DIV' /&gt;" Guid="26fbd79c-441a-4298-9b9d-7abe46ba12f5" InformativeScreenshot="22e31f9b912172c60041a8ac68e81dfe.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/psF-Hi2_8UKygBTj-WeuEQ" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
                         <uix:TargetAnchorable.CvTextArgument>
                           <InArgument x:TypeArguments="x:String">
                             <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">Products</CSharpValue>
                           </InArgument>
                         </uix:TargetAnchorable.CvTextArgument>
+                        <uix:TargetAnchorable.ScopeSelectorArgument>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">"&lt;html app='"+Browser+"' title='Practice Software Testing - Toolshop - v5.0' /&gt;"</CSharpValue>
+                          </InArgument>
+                        </uix:TargetAnchorable.ScopeSelectorArgument>
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                     <sap:WorkflowViewStateService.ViewState>
@@ -492,9 +503,9 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <uix:NCheckState DisplayName="Check App State 'Home(1)'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="486.4,3632" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="bdf02510-6247-4f8e-9a7c-0f860b2538a0" Version="V5">
+                  <uix:NCheckState DisplayName="Check App State 'Home(1)'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="486.4,4140" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="bdf02510-6247-4f8e-9a7c-0f860b2538a0" Version="V5">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="484.8,813.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="484.8,817.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -514,7 +525,13 @@
                         </ar:passedStep>
                         <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Home(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,197.6" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bdf02510-6247-4f8e-9a7c-0f860b2538a0" Version="V5">
                           <uix:NClick.Target>
-                            <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/product/01KJSJ85TVD4TE48YTWAP7399Q" CVScreenId="25c342d3-8d6b-41f9-8c3b-1b7040b8f8bb" ContentHash="_sWGjd2A4EeGqOvXYBU1_A" CvTextArea="1321, 381, 55, 17" CvTextArgument="Home" CvType="Text" DesignTimeRectangle="1313, 365, 73, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='navbarSupportedContent' tag='A' /&gt;" Guid="a53ac5a8-89f2-45aa-a986-a30be45ae13d" InformativeScreenshot="81e5532f79e25e9c850c7947c5a55a80.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/Qv7Hs9XNJUmBpmdFkagtCQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Pliers - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                            <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/product/01KJSJ85TVD4TE48YTWAP7399Q" CVScreenId="25c342d3-8d6b-41f9-8c3b-1b7040b8f8bb" ContentHash="_sWGjd2A4EeGqOvXYBU1_A" CvTextArea="1321, 381, 55, 17" CvTextArgument="Home" CvType="Text" DesignTimeRectangle="1313, 365, 73, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='navbarSupportedContent' tag='A' /&gt;" Guid="a53ac5a8-89f2-45aa-a986-a30be45ae13d" InformativeScreenshot="81e5532f79e25e9c850c7947c5a55a80.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/Qv7Hs9XNJUmBpmdFkagtCQ" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                              <uix:TargetAnchorable.ScopeSelectorArgument>
+                                <InArgument x:TypeArguments="x:String">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77">"&lt;html app='"+Browser+"' title='Pliers - Practice Software Testing - Toolshop - v5.0' /&gt;"</CSharpValue>
+                                </InArgument>
+                              </uix:TargetAnchorable.ScopeSelectorArgument>
+                            </uix:TargetAnchorable>
                           </uix:NClick.Target>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -539,7 +556,7 @@
                       </Sequence>
                     </uix:NCheckState.IfExists>
                     <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="484.8,2472.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="484.8,2976.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -571,14 +588,26 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:LogMessage>
-                        <uix:NCheckState DisplayName="Check App State 'line'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,1844" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="bdf02510-6247-4f8e-9a7c-0f860b2538a0" Version="V5">
+                        <uix:NCheckState DisplayName="Check App State 'line'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,2348" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="bdf02510-6247-4f8e-9a7c-0f860b2538a0" Version="V5">
                           <uix:NCheckState.IfExists>
-                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,996" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,1382.4" sap2010:WorkflowViewState.IdRef="Sequence_14">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
+                              <ar:passedStep sap:VirtualizedContainerService.HintSize="416,386.4" sap2010:WorkflowViewState.IdRef="passedStep_4" str_in_actualStep="cross button present" str_in_expectedStep="cross button present" str_in_stepDescription="cross button present" str_in_stepName="cross button present">
+                                <ar:passedStep.str_in_reportId>
+                                  <InArgument x:TypeArguments="x:Int32">
+                                    <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68">reportId</CSharpValue>
+                                  </InArgument>
+                                </ar:passedStep.str_in_reportId>
+                                <ar:passedStep.str_in_testId>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69">chatBotTest</CSharpValue>
+                                  </InArgument>
+                                </ar:passedStep.str_in_testId>
+                              </ar:passedStep>
                               <ar:infoStep str_in_actualStep="{x:Null}" str_in_expectedStep="{x:Null}" str_in_stepDescription="{x:Null}" sap:VirtualizedContainerService.HintSize="416,386.4" sap2010:WorkflowViewState.IdRef="infoStep_5" str_in_stepName="chatBot completed">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -612,7 +641,13 @@
                               </ui:LogMessage>
                               <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'line'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,197.6" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bdf02510-6247-4f8e-9a7c-0f860b2538a0" Version="V5">
                                 <uix:NClick.Target>
-                                  <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="012d6869-63cc-47b8-a02c-623e9ba67038" ContentHash="E_hkK4Vbj0mWR4h2WQvPhg" CvElementArea="1832, 401, 30, 29" CvType="CloseButton" DesignTimeRectangle="1841, 410, 13, 13" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl idx='2' tag='line' /&gt;" Guid="bd409212-e08c-4cf8-933d-1addb5e0a5c6" InformativeScreenshot="9b79e2a07c8d64a974e2f0bd76e3df04.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/sXyRI4HVf0qUqf_IlASS4A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                                  <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="012d6869-63cc-47b8-a02c-623e9ba67038" ContentHash="E_hkK4Vbj0mWR4h2WQvPhg" CvElementArea="1832, 401, 30, 29" CvType="CloseButton" DesignTimeRectangle="1841, 410, 13, 13" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl idx='2' tag='line' /&gt;" Guid="bd409212-e08c-4cf8-933d-1addb5e0a5c6" InformativeScreenshot="9b79e2a07c8d64a974e2f0bd76e3df04.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/sXyRI4HVf0qUqf_IlASS4A" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                                    <uix:TargetAnchorable.ScopeSelectorArgument>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_79">"&lt;html app='"+Browser+"' title='Practice Software Testing - Toolshop - v5.0' /&gt;"</CSharpValue>
+                                      </InArgument>
+                                    </uix:TargetAnchorable.ScopeSelectorArgument>
+                                  </uix:TargetAnchorable>
                                 </uix:NClick.Target>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -637,7 +672,7 @@
                             </Sequence>
                           </uix:NCheckState.IfExists>
                           <uix:NCheckState.IfNotExists>
-                            <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,502.4" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                            <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,620" sap2010:WorkflowViewState.IdRef="Sequence_15">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -661,7 +696,7 @@
                                   </InArgument>
                                 </ar:infoStep.str_in_testId>
                               </ar:infoStep>
-                              <ui:LogMessage DisplayName="Log Message for &quot;infostep&quot;" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Info">
+                              <ui:LogMessage DisplayName="Log Message for &quot;infostep&quot;" sap:VirtualizedContainerService.HintSize="416,169.6" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Info">
                                 <ui:LogMessage.Message>
                                   <InArgument x:TypeArguments="x:Object">
                                     <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47">"infostep failed"</CSharpValue>
@@ -677,13 +712,25 @@
                             </Sequence>
                           </uix:NCheckState.IfNotExists>
                           <uix:NCheckState.Target>
-                            <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="012d6869-63cc-47b8-a02c-623e9ba67038" ContentHash="E_hkK4Vbj0mWR4h2WQvPhg" CvElementArea="1832, 401, 30, 29" CvType="CloseButton" DesignTimeRectangle="1841, 410, 13, 13" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl idx='2' tag='line' /&gt;" Guid="bd409212-e08c-4cf8-933d-1addb5e0a5c6" InformativeScreenshot="9b79e2a07c8d64a974e2f0bd76e3df04.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/sXyRI4HVf0qUqf_IlASS4A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                            <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="012d6869-63cc-47b8-a02c-623e9ba67038" ContentHash="E_hkK4Vbj0mWR4h2WQvPhg" CvElementArea="1832, 401, 30, 29" CvType="CloseButton" DesignTimeRectangle="1841, 410, 13, 13" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl idx='2' tag='line' /&gt;" Guid="bd409212-e08c-4cf8-933d-1addb5e0a5c6" InformativeScreenshot="9b79e2a07c8d64a974e2f0bd76e3df04.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/sXyRI4HVf0qUqf_IlASS4A" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                              <uix:TargetAnchorable.ScopeSelectorArgument>
+                                <InArgument x:TypeArguments="x:String">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78">"&lt;html app='"+Browser+"' title='Practice Software Testing - Toolshop - v5.0' /&gt;"</CSharpValue>
+                                </InArgument>
+                              </uix:TargetAnchorable.ScopeSelectorArgument>
+                            </uix:TargetAnchorable>
                           </uix:NCheckState.Target>
                         </uix:NCheckState>
                       </Sequence>
                     </uix:NCheckState.IfNotExists>
                     <uix:NCheckState.Target>
-                      <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/product/01KJSJ85TVD4TE48YTWAP7399Q" CVScreenId="25c342d3-8d6b-41f9-8c3b-1b7040b8f8bb" ContentHash="_sWGjd2A4EeGqOvXYBU1_A" CvTextArea="1321, 381, 55, 17" CvTextArgument="Home" CvType="Text" DesignTimeRectangle="1313, 365, 73, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='navbarSupportedContent' tag='A' /&gt;" Guid="a53ac5a8-89f2-45aa-a986-a30be45ae13d" InformativeScreenshot="81e5532f79e25e9c850c7947c5a55a80.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/Qv7Hs9XNJUmBpmdFkagtCQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Pliers - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/product/01KJSJ85TVD4TE48YTWAP7399Q" CVScreenId="25c342d3-8d6b-41f9-8c3b-1b7040b8f8bb" ContentHash="_sWGjd2A4EeGqOvXYBU1_A" CvTextArea="1321, 381, 55, 17" CvTextArgument="Home" CvType="Text" DesignTimeRectangle="1313, 365, 73, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='navbarSupportedContent' tag='A' /&gt;" Guid="a53ac5a8-89f2-45aa-a986-a30be45ae13d" InformativeScreenshot="81e5532f79e25e9c850c7947c5a55a80.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/Qv7Hs9XNJUmBpmdFkagtCQ" SearchSteps="Selector, TextNative, CV" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.ScopeSelectorArgument>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76">"&lt;html app='"+Browser+"' title='Pliers - Practice Software Testing - Toolshop - v5.0' /&gt;"</CSharpValue>
+                          </InArgument>
+                        </uix:TargetAnchorable.ScopeSelectorArgument>
+                      </uix:TargetAnchorable>
                     </uix:NCheckState.Target>
                   </uix:NCheckState>
                 </Sequence>
@@ -702,10 +749,18 @@
               </ActivityFunc>
             </uix:NApplicationCard.OCREngine>
             <uix:NApplicationCard.TargetApp>
-              <uix:TargetApp Area="-8, -8, 1040, 736" BrowserType="Chrome" ContentHash="rdPHmYbW7ESG_DgI-pGArQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOQSURBVDhPHdDpT9sFAMbxnzHxWDZlG4bAdNwbKFdxCSBzm4CwwcY1w8BJhxtyNMhYuWHQg1JaenFIgXK2UCgFWugBJVBQwMVX/gO+8I3xnfGFJr78mvHi8/KbPHmEnS07Ae8qAZ+DXZ+D/cA6R0EPPx75Of5pj5OTIMdnDjg5DXL66ojTn484Pj3k+PQIYddjx+e24d9axre1zK7PyV7Aze7OBnsBF4FdFwH/Ogd7Lg6DHg4PfQSDOxwc+Nnf9yI45gz4XYv4XFa8m1Z2vOsE/Jvs+DfweZy4XSusL5lZndVjmTSwtmbDt72CZ2uFbfcqwpZz4Sz2uGx4XTbc61amJ0xotRo6OjppkbZjHBml8bunpKWk8qjya5ZmjCzNmlhZNCP4tld5ze91srI8R6tUilj8lLrG5zQ2SXnyTEJ5hZi4qGhCzr2NKCmB6XEti9NGLD/oEM5mrttw2GdpqK8nOSmFiPBwKr/5lsFRC90DegoL7xMdFkJMWAi14kcsLUyemZnQI/h9bnxeN+pBFSLRDc69+w5vvfkGWaIU9F3P0UnrkVQWk5/xCV99mYVuoIepUQ2WcS1jwzIE75YTu22Oyqpq4mJiiQm/SHToeT6OuMTDglyK7peQf+8BdY/LkLc1YBlVM2lQYtYrMA29RLBOG5F1NpP7RQ6fpSaQk36dG/FXiAy9wPUkETfzS8nKKUT6opl5s555s47ZcQ3To2rGdAoE02A3jdVllORlIy7OpeR2OnfS4ki6GkpE2AekZd4hNSsPSX091plxZicMmEeGGNOr0A32Iwx0Smirq0QprUXeUsuzslweZCeTlfgRVy5fIDY+ke+LcvilvQqHUcHosAqDWo5W2YuypxVhRNWBWdPD/IiSGb2MvqYniIuyuZuRSMKHoRREXeTXqlT+6yzl1XAbU/pBxrRKdAN9qF62ISxOaLBbDMyPD2ExKhnqbqau4i7Fn4v49NpVSqPe56Agmr8kefyhrsOmUzCiljOk6KO/qx3BaZ1kY2ka25SRKcMAenkH0toqynMyuJ0Sz83Iy5hSQ/j9cRr/9Fawp37BhEaOVtGLrKsVYc02g2NxEuuUCcvrczT9yNsk1JTlU5SZTFZcBI2x5zkuiOJf6T1+G6zBoupCJ+tC2d2K4Nl04Fyawz5vZmHSyIReyUB3C03VDym/lc6txEjKIt9jLeMSfzdk8udQDVZlK3pZJ6oeKf8DaghvRLQAO+gAAAAASUVORK5CYII=" InformativeScreenshot="72f920a8bfe25a074363a9b69f977032.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/hxQ7Q_RJh02Gw2FHdOLcbg" Selector="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" Url="https://practicesoftwaretesting.com/" Version="V2">
+              <uix:TargetApp Area="-8, -8, 1040, 736" BrowserType="Chrome" ContentHash="rdPHmYbW7ESG_DgI-pGArQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOQSURBVDhPHdDpT9sFAMbxnzHxWDZlG4bAdNwbKFdxCSBzm4CwwcY1w8BJhxtyNMhYuWHQg1JaenFIgXK2UCgFWugBJVBQwMVX/gO+8I3xnfGFJr78mvHi8/KbPHmEnS07Ae8qAZ+DXZ+D/cA6R0EPPx75Of5pj5OTIMdnDjg5DXL66ojTn484Pj3k+PQIYddjx+e24d9axre1zK7PyV7Aze7OBnsBF4FdFwH/Ogd7Lg6DHg4PfQSDOxwc+Nnf9yI45gz4XYv4XFa8m1Z2vOsE/Jvs+DfweZy4XSusL5lZndVjmTSwtmbDt72CZ2uFbfcqwpZz4Sz2uGx4XTbc61amJ0xotRo6OjppkbZjHBml8bunpKWk8qjya5ZmjCzNmlhZNCP4tld5ze91srI8R6tUilj8lLrG5zQ2SXnyTEJ5hZi4qGhCzr2NKCmB6XEti9NGLD/oEM5mrttw2GdpqK8nOSmFiPBwKr/5lsFRC90DegoL7xMdFkJMWAi14kcsLUyemZnQI/h9bnxeN+pBFSLRDc69+w5vvfkGWaIU9F3P0UnrkVQWk5/xCV99mYVuoIepUQ2WcS1jwzIE75YTu22Oyqpq4mJiiQm/SHToeT6OuMTDglyK7peQf+8BdY/LkLc1YBlVM2lQYtYrMA29RLBOG5F1NpP7RQ6fpSaQk36dG/FXiAy9wPUkETfzS8nKKUT6opl5s555s47ZcQ3To2rGdAoE02A3jdVllORlIy7OpeR2OnfS4ki6GkpE2AekZd4hNSsPSX091plxZicMmEeGGNOr0A32Iwx0Smirq0QprUXeUsuzslweZCeTlfgRVy5fIDY+ke+LcvilvQqHUcHosAqDWo5W2YuypxVhRNWBWdPD/IiSGb2MvqYniIuyuZuRSMKHoRREXeTXqlT+6yzl1XAbU/pBxrRKdAN9qF62ISxOaLBbDMyPD2ExKhnqbqau4i7Fn4v49NpVSqPe56Agmr8kefyhrsOmUzCiljOk6KO/qx3BaZ1kY2ka25SRKcMAenkH0toqynMyuJ0Sz83Iy5hSQ/j9cRr/9Fawp37BhEaOVtGLrKsVYc02g2NxEuuUCcvrczT9yNsk1JTlU5SZTFZcBI2x5zkuiOJf6T1+G6zBoupCJ+tC2d2K4Nl04Fyawz5vZmHSyIReyUB3C03VDym/lc6txEjKIt9jLeMSfzdk8udQDVZlK3pZJ6oeKf8DaghvRLQAO+gAAAAASUVORK5CYII=" InformativeScreenshot="72f920a8bfe25a074363a9b69f977032.jpg" Reference="vaNb1iUuN0SUAA_LOmUJUQ/hxQ7Q_RJh02Gw2FHdOLcbg" Url="https://practicesoftwaretesting.com/" Version="V2">
                 <uix:TargetApp.Arguments>
                   <InArgument x:TypeArguments="x:String" />
                 </uix:TargetApp.Arguments>
+                <uix:TargetApp.FilePath>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.FilePath>
+                <uix:TargetApp.Selector>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">"&lt;html app='"+Browser+"' title='Practice Software Testing - Toolshop - v5.0' /&gt;"</CSharpValue>
+                  </InArgument>
+                </uix:TargetApp.Selector>
                 <uix:TargetApp.WorkingDirectory>
                   <InArgument x:TypeArguments="x:String" />
                 </uix:TargetApp.WorkingDirectory>
@@ -726,13 +781,16 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="555.2,233.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="555.2,582.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="errorMessage" />
+              </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="exception in chatbot" sap:VirtualizedContainerService.HintSize="521.6,169.6" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Warn">
+              <ui:LogMessage DisplayName="exception in chatbot" sap:VirtualizedContainerService.HintSize="521.6,178.4" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Warn">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">"exception in chatbot module: "+exception.ToString()</CSharpValue>
@@ -745,6 +803,40 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
+              <Assign sap:VirtualizedContainerService.HintSize="521.6,178.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">
+                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">errorMessage</CSharpReference>
+                  </OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_80">DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss")+exception.Message</CSharpValue>
+                  </InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+              <ui:AppendLine File="{x:Null}" DisplayName="Append Line" sap:VirtualizedContainerService.HintSize="521.6,161.6" sap2010:WorkflowViewState.IdRef="AppendLine_2" UseDefaultEncoding="False">
+                <ui:AppendLine.FileName>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">@"C:\Users\Testing\Documents\UiPath\ToolsAuto\ErrorData\ErrorDetails.txt"</CSharpValue>
+                  </InArgument>
+                </ui:AppendLine.FileName>
+                <ui:AppendLine.Text>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">errorMessage</CSharpValue>
+                  </InArgument>
+                </ui:AppendLine.Text>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:AppendLine>
             </Sequence>
           </ActivityAction>
         </Catch>

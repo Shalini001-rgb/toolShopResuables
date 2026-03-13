@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="jIEJGuSjZ0qH9ya7hMvFGg" Reference="OxB2zzKI3k-tStEjfS750g/5hZJ_BJOhE2FSnEtTnd1og" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/checkout" CVScreenId="b69544c5-ffe0-4c94-ae1a-507d1f596e3c" CvTextArea="1304, 381, 56, 18" CvTextArgument="Home" CvType="Text" DesignTimeRectangle="1295, 365, 74, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='navbarSupportedContent' tag='A' /&gt;" Guid="1f15d40e-171d-4867-8ec9-10525fa8d265" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.ScopeSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;html app='"+Browser+"' title='Checkout - Practice Software Testing - Toolshop - v5.0' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.ScopeSelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="fe821c66af789aab08b5e890df31bd39.jpg" xmlns="">0-0PYRajwXkyuZH96h2Xz1A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

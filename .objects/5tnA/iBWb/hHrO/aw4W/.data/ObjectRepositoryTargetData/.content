@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Z2PiO1xehEOUZcfYTlyzIA" Reference="OxB2zzKI3k-tStEjfS750g/aw4W0C37j0ekCsZFb8LKLw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/contact" CVScreenId="7da52bb1-d34a-45d0-a4b1-53305f62a731" DesignTimeRectangle="1532, 365, 80, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='nav-link' parentid='navbarSupportedContent' tag='A' innertext='Sign in' /&gt;" Guid="a67d0a76-f8ba-4ae1-9765-a312e17cf34d" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.ScopeSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;html app='"+Browser+"' title='Contact Us - Practice Software Testing - Toolshop - v5.0' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.ScopeSelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="97d358a4eda89924c6d75d886e3f13b7.jpg" xmlns="">0OmOjH5zhi0WJyZQko78Mdw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

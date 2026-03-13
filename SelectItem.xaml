@@ -1,5 +1,7 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SelectItem" this:SelectItem.int_reportid="0" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ar="clr-namespace:atuipath_utilities.Report;assembly=atuipath_utilities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SelectItem" this:SelectItem.Browser="chrome.exe" this:SelectItem.rowNumber="0" this:SelectItem.int_reportid="0" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ar="clr-namespace:atuipath_utilities.Report;assembly=atuipath_utilities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
+    <x:Property Name="Browser" Type="InArgument(x:String)" />
+    <x:Property Name="rowNumber" Type="InArgument(x:Int32)" />
     <x:Property Name="ExcelPath" Type="InArgument(x:String)" />
     <x:Property Name="str_suiteid" Type="InArgument(x:String)" />
     <x:Property Name="int_reportid" Type="InArgument(x:Int32)">
@@ -68,6 +70,8 @@
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>System.Security</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -146,7 +150,12 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SelectItem" sap:VirtualizedContainerService.HintSize="948.4000000000001,5858.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="SelectItem" sap:VirtualizedContainerService.HintSize="722,6143.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="selectitem_testid" />
       <Variable x:TypeArguments="x:String" Name="ElementSearch" />
@@ -157,39 +166,15 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ra:CreateReport ContinueOnError="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="592,166.4" sap2010:WorkflowViewState.IdRef="CreateReport_1" ReportName="select Item test report">
-      <ra:CreateReport.ReportLocation>
-        <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_48">@"C:\Users\Testing\Documents\UiPath\TestReports"</CSharpValue>
-        </InArgument>
-      </ra:CreateReport.ReportLocation>
-      <ra:CreateReport.isCreated>
-        <OutArgument x:TypeArguments="x:Int32">
-          <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">int_reportid</CSharpReference>
-        </OutArgument>
-      </ra:CreateReport.isCreated>
-    </ra:CreateReport>
-    <ra:StartSuite ContinueOnError="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="592,117.6" sap2010:WorkflowViewState.IdRef="StartSuite_1" SuiteName="select item test suite">
-      <ra:StartSuite.ReportId>
-        <InArgument x:TypeArguments="x:Int32">
-          <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">int_reportid</CSharpValue>
-        </InArgument>
-      </ra:StartSuite.ReportId>
-      <ra:StartSuite.suiteId>
-        <OutArgument x:TypeArguments="x:String">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">str_suiteid</CSharpReference>
-        </OutArgument>
-      </ra:StartSuite.suiteId>
-    </ra:StartSuite>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="592,5551.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="592,6120" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="590.4,4672" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="590.4,4888" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ar:startTest sap:VirtualizedContainerService.HintSize="556.8,60.8" sap2010:WorkflowViewState.IdRef="startTest_2" str_in_testName="Select item test start here">
+          <ar:startTest sap:VirtualizedContainerService.HintSize="556.8,282.4" sap2010:WorkflowViewState.IdRef="startTest_2" str_in_testName="Select item test start here">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -212,24 +197,23 @@
               </OutArgument>
             </ar:startTest.str_out_TestId>
           </ar:startTest>
-          <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="556.8,230.4" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="ToolSheet">
-            <ui:ReadRange.DataTable>
+          <ui:ReadCsvFile FilePath="{x:Null}" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" sap:VirtualizedContainerService.HintSize="556.8,172.8" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1">
+            <ui:ReadCsvFile.DataTable>
               <OutArgument x:TypeArguments="sd:DataTable">
-                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">SelectItemData</CSharpReference>
+                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">SelectItemData</CSharpReference>
               </OutArgument>
-            </ui:ReadRange.DataTable>
+            </ui:ReadCsvFile.DataTable>
+            <ui:ReadCsvFile.PathResource>
+              <InArgument x:TypeArguments="upr:IResource">
+                <CSharpValue x:TypeArguments="upr:IResource" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">LocalResource.FromPath(ExcelPath)</CSharpValue>
+              </InArgument>
+            </ui:ReadCsvFile.PathResource>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ReadRange.WorkbookPath>
-              <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">ExcelPath</CSharpValue>
-              </InArgument>
-            </ui:ReadRange.WorkbookPath>
-          </ui:ReadRange>
+          </ui:ReadCsvFile>
           <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="556.8,153.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
@@ -241,14 +225,14 @@
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">SelectItemData.Rows[0]["SearchItem"].ToString()</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_48">SelectItemData.Rows[rowNumber]["SearchItem"].ToString()</CSharpValue>
                     </InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
               </scg:List>
             </ui:MultipleAssign.AssignOperations>
           </ui:MultipleAssign>
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Login - Practice Software Testing - To" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="556.8,4163.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="5744120f-d851-42d3-a60d-1ea2ad6962ec" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Login - Practice Software Testing - To" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="556.8,4215.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="5744120f-d851-42d3-a60d-1ea2ad6962ec" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -302,12 +286,17 @@
                               </ar:passedStep>
                               <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Pliers'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5744120f-d851-42d3-a60d-1ea2ad6962ec" Version="V5">
                                 <uix:NClick.Target>
-                                  <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="52341932-6d89-44db-b2e6-454ab6174cca" ContentHash="QXJW0kLoOUGKUh3-Hkv_OA" DesignTimeRectangle="997, 555, 338, 30" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="1ee38221-8e60-4670-a5eb-2f5e0f686350" InformativeScreenshot="59d0eae8bcc79715f4af2d9db42d7e2a.jpg" Reference="OxB2zzKI3k-tStEjfS750g/naEKW2D4w0SH_yDE_I4b6g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+                                  <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="52341932-6d89-44db-b2e6-454ab6174cca" ContentHash="_9pzeei0BEe0mbXe17m86A" DesignTimeRectangle="997, 555, 338, 30" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="1ee38221-8e60-4670-a5eb-2f5e0f686350" InformativeScreenshot="59d0eae8bcc79715f4af2d9db42d7e2a.jpg" Reference="OxB2zzKI3k-tStEjfS750g/naEKW2D4w0SH_yDE_I4b6g" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
                                     <uix:TargetAnchorable.FullSelectorArgument>
                                       <InArgument x:TypeArguments="x:String">
-                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">"&lt;webctrl tag='H5' class='card-title' data-test='product-name' parentclass='card-body' visibleinnertext='"+ElementSearch+"' /&gt;"</CSharpValue>
+                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">"&lt;webctrl tag='H5' class='card-title' data-test='product-name' parentclass='card-body' visibleinnertext='"+ElementSearch+"' /&gt;"</CSharpValue>
                                       </InArgument>
                                     </uix:TargetAnchorable.FullSelectorArgument>
+                                    <uix:TargetAnchorable.ScopeSelectorArgument>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">"&lt;html app='"+Browser+"' title='Practice Software Testing - Toolshop - v5.0' /&gt;"</CSharpValue>
+                                      </InArgument>
+                                    </uix:TargetAnchorable.ScopeSelectorArgument>
                                   </uix:TargetAnchorable>
                                 </uix:NClick.Target>
                               </uix:NClick>
@@ -355,12 +344,17 @@
                                   </Sequence>
                                 </uix:NCheckState.IfNotExists>
                                 <uix:NCheckState.Target>
-                                  <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/product/01KK4TQRTZF5QD79G7MRPNWKYY" CVScreenId="37692a3d-17bd-451f-8ce7-2c84e6df63fc" ContentHash="vshJ-jCSQkaLzWvTXS-44w" DesignTimeRectangle="975, 396, 795, 60" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="9a08672d-98c7-4269-a548-55de838250a1" InformativeScreenshot="4c2fae40d37d25f99a7220ca1a8da51c.jpg" Reference="OxB2zzKI3k-tStEjfS750g/ksFWoTMKJEud81PJp4JpSw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Pliers - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+                                  <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com/product/01KK4TQRTZF5QD79G7MRPNWKYY" CVScreenId="37692a3d-17bd-451f-8ce7-2c84e6df63fc" ContentHash="ASLPa6G1wUScgiDDPG_lEQ" DesignTimeRectangle="975, 396, 795, 60" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="9a08672d-98c7-4269-a548-55de838250a1" InformativeScreenshot="4c2fae40d37d25f99a7220ca1a8da51c.jpg" Reference="OxB2zzKI3k-tStEjfS750g/ksFWoTMKJEud81PJp4JpSw" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
                                     <uix:TargetAnchorable.FullSelectorArgument>
                                       <InArgument x:TypeArguments="x:String">
                                         <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">"&lt;webctrl tag='H1' data-test='product-name' visibleinnertext='"+ElementSearch+"' /&gt;"</CSharpValue>
                                       </InArgument>
                                     </uix:TargetAnchorable.FullSelectorArgument>
+                                    <uix:TargetAnchorable.ScopeSelectorArgument>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">"&lt;html app='"+Browser+"' title='Pliers - Practice Software Testing - Toolshop - v5.0' /&gt;"</CSharpValue>
+                                      </InArgument>
+                                    </uix:TargetAnchorable.ScopeSelectorArgument>
                                   </uix:TargetAnchorable>
                                 </uix:NCheckState.Target>
                               </uix:NCheckState>
@@ -388,12 +382,17 @@
                             </Sequence>
                           </uix:NCheckState.IfNotExists>
                           <uix:NCheckState.Target>
-                            <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="52341932-6d89-44db-b2e6-454ab6174cca" ContentHash="QXJW0kLoOUGKUh3-Hkv_OA" DesignTimeRectangle="997, 555, 338, 30" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="1ee38221-8e60-4670-a5eb-2f5e0f686350" InformativeScreenshot="59d0eae8bcc79715f4af2d9db42d7e2a.jpg" Reference="OxB2zzKI3k-tStEjfS750g/naEKW2D4w0SH_yDE_I4b6g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+                            <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="52341932-6d89-44db-b2e6-454ab6174cca" ContentHash="_9pzeei0BEe0mbXe17m86A" DesignTimeRectangle="997, 555, 338, 30" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="1ee38221-8e60-4670-a5eb-2f5e0f686350" InformativeScreenshot="59d0eae8bcc79715f4af2d9db42d7e2a.jpg" Reference="OxB2zzKI3k-tStEjfS750g/naEKW2D4w0SH_yDE_I4b6g" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
                               <uix:TargetAnchorable.FullSelectorArgument>
                                 <InArgument x:TypeArguments="x:String">
                                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">"&lt;webctrl tag='H5' class='card-title' data-test='product-name' parentclass='card-body' visibleinnertext='"+ElementSearch+"' /&gt;"</CSharpValue>
                                 </InArgument>
                               </uix:TargetAnchorable.FullSelectorArgument>
+                              <uix:TargetAnchorable.ScopeSelectorArgument>
+                                <InArgument x:TypeArguments="x:String">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">"&lt;html app='"+Browser+"' title='Practice Software Testing - Toolshop - v5.0' /&gt;"</CSharpValue>
+                                </InArgument>
+                              </uix:TargetAnchorable.ScopeSelectorArgument>
                             </uix:TargetAnchorable>
                           </uix:NCheckState.Target>
                         </uix:NCheckState>
@@ -421,12 +420,17 @@
                       </Sequence>
                     </uix:NCheckState.IfNotExists>
                     <uix:NCheckState.Target>
-                      <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="4cc6e225-dfba-4e3b-b784-a323d1b56a42" ContentHash="uidNFLBr2E-6NOSRo9Zw8w" DesignTimeRectangle="562, 182, 1207, 42" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="c3788c4a-b2ea-40a5-8338-776dd950860d" InformativeScreenshot="c45696798701f8a8e118e609d31be43a.jpg" Reference="OxB2zzKI3k-tStEjfS750g/QSViRsBKs0WewEa99MdyQg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+                      <uix:TargetAnchorable BrowserURL="practicesoftwaretesting.com" CVScreenId="4cc6e225-dfba-4e3b-b784-a323d1b56a42" ContentHash="iDrmJ0TsdE2jDUUCEYjBlg" DesignTimeRectangle="562, 182, 1207, 42" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="c3788c4a-b2ea-40a5-8338-776dd950860d" InformativeScreenshot="c45696798701f8a8e118e609d31be43a.jpg" Reference="OxB2zzKI3k-tStEjfS750g/QSViRsBKs0WewEa99MdyQg" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
                         <uix:TargetAnchorable.FullSelectorArgument>
                           <InArgument x:TypeArguments="x:String">
                             <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">"&lt;webctrl tag='H3' aaname='Searched for: ' innertext='Searched for: "+ElementSearch+"' /&gt;"</CSharpValue>
                           </InArgument>
                         </uix:TargetAnchorable.FullSelectorArgument>
+                        <uix:TargetAnchorable.ScopeSelectorArgument>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">"&lt;html app='"+Browser+"' title='Practice Software Testing - Toolshop - v5.0' /&gt;"</CSharpValue>
+                          </InArgument>
+                        </uix:TargetAnchorable.ScopeSelectorArgument>
                       </uix:TargetAnchorable>
                     </uix:NCheckState.Target>
                   </uix:NCheckState>
@@ -441,10 +445,18 @@
               </ActivityFunc>
             </uix:NApplicationCard.OCREngine>
             <uix:NApplicationCard.TargetApp>
-              <uix:TargetApp Area="-9, -9, 1938, 1098" BrowserType="Chrome" ContentHash="5t-Qvc3QjEiQD5HQ3SKemw" IconBase64="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" InformativeScreenshot="b4a7249abf788cebe228925085686fab.jpg" Reference="OxB2zzKI3k-tStEjfS750g/4zUsId_6eU2uQ-l_ObXHNA" Selector="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" Url="https://practicesoftwaretesting.com/" Version="V2">
+              <uix:TargetApp Area="-9, -9, 1938, 1098" BrowserType="Chrome" ContentHash="5t-Qvc3QjEiQD5HQ3SKemw" IconBase64="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" InformativeScreenshot="b4a7249abf788cebe228925085686fab.jpg" Reference="OxB2zzKI3k-tStEjfS750g/4zUsId_6eU2uQ-l_ObXHNA" Url="https://practicesoftwaretesting.com/" Version="V2">
                 <uix:TargetApp.Arguments>
                   <InArgument x:TypeArguments="x:String" />
                 </uix:TargetApp.Arguments>
+                <uix:TargetApp.FilePath>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.FilePath>
+                <uix:TargetApp.Selector>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">"&lt;html app='"+Browser+"' title='Practice Software Testing - Toolshop - v5.0' /&gt;"</CSharpValue>
+                  </InArgument>
+                </uix:TargetApp.Selector>
                 <uix:TargetApp.WorkingDirectory>
                   <InArgument x:TypeArguments="x:String" />
                 </uix:TargetApp.WorkingDirectory>
@@ -459,7 +471,10 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="590.4,616" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="590.4,968.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="errorMessage" />
+              </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -482,7 +497,7 @@
                   </InArgument>
                 </ar:exceptionStep.str_in_testId>
               </ar:exceptionStep>
-              <ui:LogMessage DisplayName="exception in select item" sap:VirtualizedContainerService.HintSize="556.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn">
+              <ui:LogMessage DisplayName="exception in select item" sap:VirtualizedContainerService.HintSize="556.8,178.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">"exception in select item: "+exception.ToString()</CSharpValue>
@@ -495,6 +510,40 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
+              <Assign sap:VirtualizedContainerService.HintSize="556.8,178.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">
+                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">errorMessage</CSharpReference>
+                  </OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss")+exception.Message</CSharpValue>
+                  </InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+              <ui:AppendLine File="{x:Null}" DisplayName="Append Line" sap:VirtualizedContainerService.HintSize="556.8,161.6" sap2010:WorkflowViewState.IdRef="AppendLine_1" UseDefaultEncoding="False">
+                <ui:AppendLine.FileName>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">@"C:\Users\Testing\Documents\UiPath\ToolsAuto\ErrorData\ErrorDetails.txt"</CSharpValue>
+                  </InArgument>
+                </ui:AppendLine.FileName>
+                <ui:AppendLine.Text>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">errorMessage</CSharpValue>
+                  </InArgument>
+                </ui:AppendLine.Text>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:AppendLine>
             </Sequence>
           </ActivityAction>
         </Catch>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="kSIhNHqCnkifUrSljIZILw" Reference="OxB2zzKI3k-tStEjfS750g/xktpIZ6SREqwhSS_vxdeQQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com" CVScreenId="e072d483-053a-495a-b390-79d090d599ad" DesignTimeRectangle="1627, 381, 25, 20" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='img' tag='svg' data-icon='cart-shopping' /&gt;" Guid="5065006d-fb6e-4792-b51f-e779dd3c48c7" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.ScopeSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;html app='"+Browser+"' title='Practice Software Testing - Toolshop - v5.0' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.ScopeSelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="c7c1a60a33f3abfde710aef59017ccc6.jpg" xmlns="">0yWWyeDIZJ0O3gXVDXhyZ7g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Checkout - Practice Software Testing -(1)",
+  "Type": "Screen",
+  "Id": "1Y7pfDFQU0uU42YIuCnDmQ",
+  "Reference": "OxB2zzKI3k-tStEjfS750g/1Y7pfDFQU0uU42YIuCnDmQ",
+  "ParentRef": "OxB2zzKI3k-tStEjfS750g/iBWbU-QtD0Kw_xGL4S56tw",
+  "Created": "2026-03-12T05:03:31.7029799Z",
+  "Updated": "2026-03-12T05:03:31.7029799Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

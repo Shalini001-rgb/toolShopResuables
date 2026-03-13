@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="hiTjVrXGhUey25OM552wGQ" Reference="OxB2zzKI3k-tStEjfS750g/MQtf-UxzHkG0I8GgXZpcYw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="SDSr9jqbQE2PzYNMspnWzw" Reference="OxB2zzKI3k-tStEjfS750g/MQtf-UxzHkG0I8GgXZpcYw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
     <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/product/01KK4Y5KYPR318X2SJP3K4BTK6" CVScreenId="b522d494-23de-469e-8be1-0d71514c3e59" CvTextArea="1241, 316, 56, 18" CvTextArgument="Home" CvType="Text" DesignTimeRectangle="1233, 300, 74, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='navbarSupportedContent' tag='A' /&gt;" Guid="a06bfb25-d740-4db2-9c48-1ea38c23fe2f" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
       <TargetAnchorable.ScopeSelectorArgument>
         <p:InArgument x:TypeArguments="x:String">
-          <p:CSharpValue x:TypeArguments="x:String">"&lt;html app='chrome.exe' title='"+ElementSearch+" - Practice Software Testing - Toolshop - v5.0' /&gt;"</p:CSharpValue>
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;html app='"+Browser+"' title='"+ElementSearch+" - Practice Software Testing - Toolshop - v5.0' /&gt;"</p:CSharpValue>
         </p:InArgument>
       </TargetAnchorable.ScopeSelectorArgument>
-      <imageRef attrName="InformativeScreenshot" originalValue="b2f34a2f29f1ce4dfc3e5f5340927ea5.jpg" xmlns="">0N9JeUdmefUi4tEaJx6sfOg</imageRef>
+      <imageRef attrName="InformativeScreenshot" originalValue="b2f34a2f29f1ce4dfc3e5f5340927ea5.jpg" xmlns="">0MzjR0b6s2EOMHszILkzjrA</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">Click</x:String>
   </ObjectRepositoryTargetData.Data>

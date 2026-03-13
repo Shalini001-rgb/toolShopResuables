@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="OSbvC4uS80GAJ0qLKGVIwQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="LfxMaxxkDUqeY8SDeOe4Ug" Reference="OxB2zzKI3k-tStEjfS750g/DewJQb0d7kmutfFxelgzHA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com" CVScreenId="2c0b4fc0-78d6-4201-a391-a303ee893a9c" DesignTimeRectangle="1539, 365, 80, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Sign in' class='nav-link' parentid='navbarSupportedContent' tag='A' innertext='Sign in' /&gt;" Guid="4a2bf66f-5212-46fd-9253-6d90f3867da6" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
-      <imageRef attrName="InformativeScreenshot" originalValue="22917920143cda63600d0f2cbfc24e6d.jpg" xmlns="">0SLbXjGuf5UmR8VqCajy2sA</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com" CVScreenId="2c0b4fc0-78d6-4201-a391-a303ee893a9c" DesignTimeRectangle="1539, 365, 80, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Sign in' class='nav-link' parentid='navbarSupportedContent' tag='A' innertext='Sign in' /&gt;" Guid="4a2bf66f-5212-46fd-9253-6d90f3867da6" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.ScopeSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;html app='"+Browser+"' title='Practice Software Testing - Toolshop - v5.0' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.ScopeSelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="22917920143cda63600d0f2cbfc24e6d.jpg" xmlns="">052GYGdUIAk2qW8hTEB6vcA</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">CheckState</x:String>
   </ObjectRepositoryTargetData.Data>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="tIB33DcebE6ImxpJfXhl9A" Reference="OxB2zzKI3k-tStEjfS750g/FtISSfB29UmU57eE7nkZ6w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="eGkr4r7Hj0mul6B_Ov165A" Reference="OxB2zzKI3k-tStEjfS750g/FtISSfB29UmU57eE7nkZ6w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
     <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/product/01KK4TQRTZF5QD79G7MRPNWKYY" CVScreenId="61231610-4c19-4c1d-9404-49a628e7caf6" DesignTimeRectangle="975, 1005, 166, 47" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='btn-add-to-cart' tag='BUTTON' aaname='Add to cart ' /&gt;" Guid="5d57a723-84c0-485f-a2a7-2712458b315d" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
       <TargetAnchorable.ScopeSelectorArgument>
         <p:InArgument x:TypeArguments="x:String">
-          <p:CSharpValue x:TypeArguments="x:String">"&lt;html app='chrome.exe' title='"+ElementSearch+" - Practice Software Testing - Toolshop - v5.0' /&gt;"</p:CSharpValue>
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;html app='"+Browser+"' title='"+ElementSearch+" - Practice Software Testing - Toolshop - v5.0' /&gt;"</p:CSharpValue>
         </p:InArgument>
       </TargetAnchorable.ScopeSelectorArgument>
-      <imageRef attrName="InformativeScreenshot" originalValue="67785168e9c6b940e8f0bb3cf1ac011d.jpg" xmlns="">0K2c6rC7Od0uNmx4INQo6Pg</imageRef>
+      <imageRef attrName="InformativeScreenshot" originalValue="67785168e9c6b940e8f0bb3cf1ac011d.jpg" xmlns="">0sKRPhJgyG06KaCmwhF8_vw</imageRef>
     </TargetAnchorable>
-    <x:String x:Key="ActivityType">Click</x:String>
+    <x:String x:Key="ActivityType">CheckState</x:String>
   </ObjectRepositoryTargetData.Data>
 </ObjectRepositoryTargetData>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="-RV-VUenPUOyBF86inD-lQ" Reference="OxB2zzKI3k-tStEjfS750g/5Zaze7yKwkuDGl0U2Ux4nQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/checkout" CVScreenId="bd30ab77-0b07-4514-855e-7afb37cc851a" DesignTimeRectangle="1644, 625, 57, 47" ElementVisibilityArgument="Interactive" Guid="d57ba45f-3029-44a0-ab94-39f76ded41ac" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target CVScreenId="bd30ab77-0b07-4514-855e-7afb37cc851a" DesignTimeRectangle="160, 626, 81, 27" ElementType="Text" FuzzyAccuracy="1" Guid="2034ac4a-c277-4f98-a549-4685cfc0521e" SearchSteps="FuzzySelector">
+            <Target.FuzzySelectorArgument>
+              <p:InArgument x:TypeArguments="x:String">
+                <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='product-title' aaname='"+item+" ' data-test='product-title' tableCol='1' check:innerText='"+item+"' /&gt;"</p:CSharpValue>
+              </p:InArgument>
+            </Target.FuzzySelectorArgument>
+          </Target>
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <TargetAnchorable.FullSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='A' rowName='"+item+" ' tableCol='5' class='btn btn-danger' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.FullSelectorArgument>
+      <TargetAnchorable.ScopeSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;html app='"+Browser+"' title='Checkout - Practice Software Testing - Toolshop - v5.0' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.ScopeSelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="0bc26813363762b80374cf16c7886353.jpg" xmlns="">0bc26813363762b80374cf16c7886353.jpg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

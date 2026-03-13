@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="jnxgDVA9NUqe3jFzVNL9LQ" Reference="OxB2zzKI3k-tStEjfS750g/uqKx0Yh6D0GTYlCHURb71w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="1k1T8POjgEC_OrWs5rpNuw" Reference="OxB2zzKI3k-tStEjfS750g/uqKx0Yh6D0GTYlCHURb71w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
     <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/product/01KK4TQRTZF5QD79G7MRPNWKYY" CVScreenId="54b3eb4b-6908-4a3a-b7bc-7fa61198e2f9" DesignTimeRectangle="1030, 1013, 45, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='quantity-input' tag='INPUT' /&gt;" Guid="0c23f84f-df66-4af4-99cf-bb5d4a35c0c6" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
       <TargetAnchorable.ScopeSelectorArgument>
         <p:InArgument x:TypeArguments="x:String">
-          <p:CSharpValue x:TypeArguments="x:String">"&lt;html app='chrome.exe' title='"+ElementSearch+" - Practice Software Testing - Toolshop - v5.0' /&gt;"</p:CSharpValue>
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;html app='"+Browser+"' title='"+ElementSearch+" - Practice Software Testing - Toolshop - v5.0' /&gt;"</p:CSharpValue>
         </p:InArgument>
       </TargetAnchorable.ScopeSelectorArgument>
-      <imageRef attrName="InformativeScreenshot" originalValue="4294e623405f7155eae33e05f17e1762.jpg" xmlns="">0M0okt3GDt0WkcgthixomDw</imageRef>
+      <imageRef attrName="InformativeScreenshot" originalValue="4294e623405f7155eae33e05f17e1762.jpg" xmlns="">0lZiabWjsf0G91OEdvcZDaQ</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">TypeInto</x:String>
   </ObjectRepositoryTargetData.Data>

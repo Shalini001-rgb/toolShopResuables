@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="2atxgxnUs0qZuvUY3q3mfA" Reference="OxB2zzKI3k-tStEjfS750g/YgBWYLx3l0SSKQvs4BELrA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="hXJXNgbqpUu2jLaVxEOKDw" Reference="OxB2zzKI3k-tStEjfS750g/YgBWYLx3l0SSKQvs4BELrA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com" CVScreenId="70a1da88-acd7-4e2a-ab04-0cd3b0c4b94a" DesignTimeRectangle="562, 269, 1207, 42" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="9ac35d6c-dbfd-42ad-baad-1dc3fed06ea2" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com" CVScreenId="70a1da88-acd7-4e2a-ab04-0cd3b0c4b94a" DesignTimeRectangle="562, 269, 1207, 42" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="9ac35d6c-dbfd-42ad-baad-1dc3fed06ea2" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
       <TargetAnchorable.FullSelectorArgument>
         <p:InArgument x:TypeArguments="x:String">
           <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl tag='H3' aaname='Searched for: ' innertext='Searched for: "+ElementSearch+"' /&gt;"</p:CSharpValue>
         </p:InArgument>
       </TargetAnchorable.FullSelectorArgument>
-      <imageRef attrName="InformativeScreenshot" originalValue="c3923d41cb26074ad4210d6de1c3ea73.jpg" xmlns="">0nDHAzJRptUWVV4Hb1Jvn_g</imageRef>
+      <TargetAnchorable.ScopeSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;html app='"+Browser+"' title='Practice Software Testing - Toolshop - v5.0' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.ScopeSelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="c3923d41cb26074ad4210d6de1c3ea73.jpg" xmlns="">0WTXG_fjFrEaedfDTWWodDA</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">CheckState</x:String>
   </ObjectRepositoryTargetData.Data>

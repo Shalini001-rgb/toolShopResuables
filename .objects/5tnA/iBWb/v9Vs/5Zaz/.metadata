@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Hammer",
+  "Type": "Element",
+  "Id": "5Zaze7yKwkuDGl0U2Ux4nQ",
+  "Reference": "OxB2zzKI3k-tStEjfS750g/5Zaze7yKwkuDGl0U2Ux4nQ",
+  "ParentRef": "OxB2zzKI3k-tStEjfS750g/v9VsehGc8Eigfwuxyzp9eg",
+  "Created": "2026-03-12T09:07:26.2282732Z",
+  "Updated": "2026-03-12T09:07:26.2282732Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

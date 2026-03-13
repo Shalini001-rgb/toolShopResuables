@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="FoyYkT_TREO40DD8WCy5Fw" Reference="NdnDWv5lYU2XxRkubzPcng/R9XGeWlDYEmw9ob_FOVLxQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="HzC5LiQzlESmH_0NNyvvlw" Reference="OxB2zzKI3k-tStEjfS750g/nGoaR0MBDk-akw3RsaEkuQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/auth/login" CVScreenId="942efd55-54db-46bc-a0ee-b2548ab3e0d1" DesignTimeRectangle="487, 514, 197, 36" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl type='submit' aaname='Login' /&gt;" Guid="a35f985c-7835-4c8b-ae13-d56aba713b85" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com/auth/login" CVScreenId="942efd55-54db-46bc-a0ee-b2548ab3e0d1" DesignTimeRectangle="487, 514, 197, 36" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl type='submit' aaname='Login' /&gt;" Guid="a35f985c-7835-4c8b-ae13-d56aba713b85" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.ScopeSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;html app='"+Browser+"' title='Login - Practice Software Testing - Toolshop - v5.0' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.ScopeSelectorArgument>
       <imageRef attrName="InformativeScreenshot" originalValue="2cd5b62aa8db99f2f203e86308cf5753.jpg" xmlns="">2cd5b62aa8db99f2f203e86308cf5753.jpg</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">Click</x:String>

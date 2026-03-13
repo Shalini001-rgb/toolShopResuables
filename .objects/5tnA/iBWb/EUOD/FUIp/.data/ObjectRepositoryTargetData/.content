@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="zpt7XGRj9EuGc_T2jrBzXg" Reference="OxB2zzKI3k-tStEjfS750g/FUIpQzu9cEi80JX3gpTDzQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="B6a7F-BujUuErq2US0if7w" Reference="OxB2zzKI3k-tStEjfS750g/FUIpQzu9cEi80JX3gpTDzQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com" CVScreenId="06e5f5f3-93ad-4144-8da7-db14e7fcc16d" CvElementArea="187, 743, 20, 19" CvType="CheckBox" DesignTimeRectangle="190, 745, 16, 17" ElementType="CheckBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl class='icheck' tag='INPUT' type='checkbox' parentclass='checkbox' /&gt;" Guid="68424766-38f8-4793-ab5a-09231e66a513" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Practice Software Testing - Toolshop - v5.0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practicesoftwaretesting.com" CVScreenId="06e5f5f3-93ad-4144-8da7-db14e7fcc16d" CvElementArea="187, 743, 20, 19" CvType="CheckBox" DesignTimeRectangle="190, 745, 16, 17" ElementType="CheckBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl class='icheck' tag='INPUT' type='checkbox' parentclass='checkbox' /&gt;" Guid="68424766-38f8-4793-ab5a-09231e66a513" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
       <TargetAnchorable.Anchors>
-        <scg:List x:TypeArguments="ITarget" Capacity="4">
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
           <Target CVScreenId="06e5f5f3-93ad-4144-8da7-db14e7fcc16d" CvElementArea="187, 743, 20, 19" CvTextArea="210, 744, 89, 20" CvType="CheckBox" DesignTimeRectangle="190, 739, 109, 30" ElementType="Text" FuzzyAccuracy="1" Guid="108c1c1c-ffe4-4152-98a9-b117cc49e99e" SearchSteps="FuzzySelector, CV">
             <Target.CvTextArgument>
               <p:InArgument x:TypeArguments="x:String">
@@ -18,7 +18,12 @@
           </Target>
         </scg:List>
       </TargetAnchorable.Anchors>
-      <imageRef attrName="InformativeScreenshot" originalValue="36b517d931b5f98142c613785fcc7c1d.jpg" xmlns="">00F7gC9lPq0S2dJB4fRK46g</imageRef>
+      <TargetAnchorable.ScopeSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;html app='"+Browser+"' title='Practice Software Testing - Toolshop - v5.0' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.ScopeSelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="36b517d931b5f98142c613785fcc7c1d.jpg" xmlns="">0ISkKR5cj-0a-31X6BSilpA</imageRef>
     </TargetAnchorable>
     <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
       <ObjectRepositoryVariableData Name="HandToolFilter" />
